@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Samantha A. Caermare — BSIT student and aspiring software engineer building C++, Java and web projects.">
+  <meta name="author" content="Samantha A. Caermare">
+  <meta name="theme-color" content="#080c1a">
+
+  <title>Samantha A. Caermare · Aspiring Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236c8ce0'/%3E%3Ctext x='50' y='68' font-size='54' font-family='monospace' font-weight='bold' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+  <!-- Blocking snippet: apply stored theme before first paint to avoid a flash -->
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("sam-theme"); } catch (e) { t = null; }
+      if (t !== "light" && t !== "dark") {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ======================================================================
+     Header
+     ====================================================================== -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Samantha A. Caermare — home">
+      <span class="brand__mark" aria-hidden="true">&gt;_</span>
+      <span class="brand__text">samantha<span>.dev</span></span>
+    </a>
+
+    <nav aria-label="Primary">
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#mindset">Mindset</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" type="button"
+              role="switch" aria-checked="false"
+              aria-label="Switch colour theme" title="Switch colour theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/>
+        </svg>
+      </button>
+
+      <button class="icon-btn nav__toggle" id="navToggle" type="button"
+              aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+             stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ====================================================================
+       Hero
+       ==================================================================== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow">
+          <span class="pulse" aria-hidden="true"></span>
+          Open to entry-level roles &amp; internships
+        </p>
+
+        <h1 class="hero__name">
+          Samantha<br>A. <span class="grad-text">Caermare</span>
+        </h1>
+
+        <p class="hero__role">
+          <span class="hero__typed" id="typedRole" aria-hidden="true">Fresh BSIT Graduate</span>
+          <span class="visually-hidden">Fresh BSIT Graduate, Aspiring Software Engineer</span>
+          <span class="caret" aria-hidden="true"></span><br>
+          Aspiring Software Engineer
+        </p>
+
+        <p class="hero__lead">
+          I'm a second-year BSIT student in the Philippines, still early in my learning journey.
+          I build small things with <strong>C++</strong>, <strong>Java</strong>, and
+          <strong>HTML/CSS</strong> to understand how software actually works — then I read the
+          errors, fix them, and try again.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/>
+              <path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H13z"/>
+            </svg>
+            View my projects
+          </a>
+
+          <a class="btn btn--ghost" href="https://github.com/samanthacaermare-lgtm" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.9c.56.1.77-.24.77-.54v-2.1c-3.12.68-3.78-1.34-3.78-1.34-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.49-.28-5.11-1.25-5.11-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.7 10.7 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98.72.79 1.15 1.79 1.15 3.02 0 4.32-2.62 5.27-5.12 5.55.4.35.76 1.04.76 2.1v3.11c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8z"/>
+            </svg>
+            GitHub profile
+          </a>
+
+          <span class="btn btn--todo" role="note" aria-label="Resume link not yet available">
+            Resume · not published yet
+          </span>
+        </div>
+
+        <div class="hero__meta">
+          <span class="chip"><span class="chip__dot"></span>2nd Year BSIT</span>
+          <span class="chip"><span class="chip__dot"></span>Beginner / Entry-Level</span>
+          <span class="chip"><span class="chip__dot"></span>Continuous learner</span>
+        </div>
+      </div>
+
+      <!-- Code decoration — content mirrors the verified TIC-TAC-TOE project -->
+      <div class="codewin" aria-hidden="true">
+        <div class="codewin__bar">
+          <span class="dot dot--r"></span>
+          <span class="dot dot--y"></span>
+          <span class="dot dot--g"></span>
+          <span class="codewin__file">TicTacToe.cpp</span>
+        </div>
+<pre><code><span class="tok-com">// TICTACTOE.cpp — C++ / SFML</span>
+<span class="tok-key">enum class</span> <span class="tok-type">GameState</span> { Menu, Playing, GameOver };
+
+<span class="tok-key">class</span> <span class="tok-type">TicTacToe</span> {
+  std::array&lt;<span class="tok-type">CellState</span>, <span class="tok-num">9</span>&gt> board;
+  std::optional&lt;<span class="tok-type">Player</span>&gt; winner;
+
+<span class="tok-key">public</span>:
+  <span class="tok-key">bool</span> <span class="tok-fn">makeMove</span>(<span class="tok-key">int</span> cell) {
+    <span class="tok-key">if</span> (board[cell] != CellState::Empty || winner) {
+      <span class="tok-key">return</span> <span class="tok-key">false</span>;
+    }
+    <span class="tok-key">return</span> <span class="tok-fn">checkWin</span>();
+  }
+};</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       About / recruiter positioning
+       ==================================================================== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">01 — WHO AM I</p>
+        <h2 class="section-head__title">The short version, for recruiters</h2>
+        <p class="section-head__sub">
+          Three questions I get asked most, answered honestly. No inflated claims —
+          my projects are what I'm using to speak for my ability right now.
+        </p>
+      </div>
+
+      <div class="qgrid">
+        <article class="qcard reveal">
+          <p class="qcard__q">Who am I?</p>
+          <h3 class="qcard__a">2nd Year BSIT Student</h3>
+          <p class="qcard__body">
+            Bachelor of Science in Information Technology, still in school and still early
+            in the journey. I learn by doing, mostly through class projects and small
+            personal builds.
+          </p>
+        </article>
+
+        <article class="qcard reveal">
+          <p class="qcard__q">What can I build?</p>
+          <h3 class="qcard__a">C++ &amp; Java projects</h3>
+          <p class="qcard__body">
+            Graphical programs in C++ with SFML, desktop applications in Java Swing, and
+            basic web pages in HTML and CSS. I can take an idea from blank file to
+            something that runs.
+          </p>
+        </article>
+
+        <article class="qcard reveal">
+          <p class="qcard__q">How am I developing?</p>
+          <h3 class="qcard__a">Build, break, fix, repeat</h3>
+          <p class="qcard__body">
+            Through perseverance, continuous learning, and practical project building.
+            Reading my own errors properly is the single biggest skill I've improved so far.
+          </p>
+        </article>
+      </div>
+
+      <div class="stack" style="margin-top:1.4rem">
+        <div class="card reveal">
+          <h3 class="card__title">A bit more context</h3>
+          <p class="card__hint">
+            I enjoy learning new things, practising through school projects, and getting better
+            one step at a time. I'm open to feedback, eager to take on new challenges, and
+            excited to keep growing as I continue my studies. I'm looking for an entry-level
+            Software Engineering role or internship where I can learn from a mentor team and
+            contribute to real code.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Tech stack
+       ==================================================================== -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">02 — TECH STACK</p>
+        <h2 class="section-head__title">Technologies I've worked with</h2>
+        <p class="section-head__sub">
+          Beginner / entry-level across the board. I'm not claiming mastery of anything here —
+          these are the tools I've actually used in projects, and what I'm still learning properly.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="card reveal">
+          <h3 class="card__title">Languages</h3>
+          <div class="chips" style="margin-top:.8rem">
+            <span class="chip"><span class="chip__dot"></span>C++</span>
+            <span class="chip"><span class="chip__dot"></span>Java</span>
+            <span class="chip"><span class="chip__dot"></span>PHP</span>
+            <span class="chip"><span class="chip__dot"></span>HTML5</span>
+            <span class="chip"><span class="chip__dot"></span>CSS3</span>
+            <span class="chip"><span class="chip__dot"></span>Learning: C#</span>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Tools &amp; environment</h3>
+          <div class="chips" style="margin-top:.8rem">
+            <span class="chip"><span class="chip__dot"></span>Visual Studio</span>
+            <span class="chip"><span class="chip__dot"></span>Visual Studio Code</span>
+            <span class="chip"><span class="chip__dot"></span>Git</span>
+            <span class="chip"><span class="chip__dot"></span>GitHub</span>
+            <span class="chip"><span class="chip__dot"></span>Canva</span>
+            <span class="chip"><span class="chip__dot"></span>Microsoft Office</span>
+            <span class="chip"><span class="chip__dot"></span>Apache NetBeans</span>
+            <span class="chip"><span class="chip__dot"></span>SFML 2.6.2</span>
+          </div>
+        </div>
+
+        <div class="table-scroll reveal">
+          <table>
+            <caption class="visually-hidden">Technology, where it was used, and current level</caption>
+            <thead>
+              <tr><th scope="col">Technology</th><th scope="col">Where I've used it</th><th scope="col">Level</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>C++</td><td>Tic-Tac-Toe — SFML graphical game</td><td class="state-pending">Beginner</td></tr>
+              <tr><td>Java</td><td>POS — Swing desktop application</td><td class="state-pending">Beginner</td></tr>
+              <tr><td>PHP</td><td>School exercises</td><td class="state-pending">Beginner</td></tr>
+              <tr><td>HTML / CSS</td><td>Login page, this portfolio site</td><td class="state-pending">Beginner</td></tr>
+              <tr><td>Git / GitHub</td><td>Repositories, commits, this profile</td><td class="state-pending">In progress</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Projects
+       ==================================================================== -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">03 — PROJECTS</p>
+        <h2 class="section-head__title">Featured &amp; development work</h2>
+        <p class="section-head__sub">
+          Every feature listed below was read from the actual source code. Where a link doesn't
+          exist yet it says so, rather than pointing somewhere that isn't there.
+        </p>
+      </div>
+
+      <div class="projects">
+
+        <!-- PROJECT 1 — POS -->
+        <article class="project reveal">
+          <div class="project__head">
+            <h3 class="project__title">POS — Point of Sale System</h3>
+            <span class="tag-category">Java · Desktop GUI</span>
+          </div>
+
+          <p class="project__desc">
+            A desktop point-of-sale application built with Java Swing for a fast-food style menu.
+            Items are picked from image buttons, tracked in a live order table, totalled
+            automatically, and printed as a formatted receipt.
+          </p>
+
+          <div class="project__cols">
+            <div>
+              <span class="meta-label">Category</span>
+              <p class="meta-value">Desktop application · GUI programming</p>
+            </div>
+            <div>
+              <span class="meta-label">Technologies</span>
+              <p class="meta-value">
+                <strong>Java</strong>, Swing, <strong>JTable</strong>, DefaultTableModel,
+                Vector, DecimalFormat, Apache NetBeans
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span class="meta-label">Key features (verified from source)</span>
+            <ul class="project__skills">
+              <li>Product grid with 6 icon buttons</li>
+              <li>Per-item quantity counter per click</li>
+              <li>Live JTable: ID, ITEM, QTY, PRICE</li>
+              <li>Re-adding an item updates its row</li>
+              <li>Automatic subtotal via DecimalFormat</li>
+              <li>DELETE row + counter reset via switch</li>
+              <li>CASH / PAY change calculation</li>
+              <li>PRINT formatted receipt to printer</li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="meta-label">Skills demonstrated</span>
+            <ul class="project__skills">
+              <li>Event handling</li>
+              <li>Table models</li>
+              <li>Arrays &amp; loop iteration</li>
+              <li>Switch statements</li>
+              <li>Number formatting</li>
+              <li>NetBeans GUI builder</li>
+            </ul>
+          </div>
+
+          <div class="project__actions">
+            <span class="btn btn--todo" role="note">Repository · ADD LINK</span>
+            <span class="btn btn--todo" role="note">Demo · ADD LINK</span>
+            <span class="btn btn--todo" role="note">Screenshots · NEEDS VERIFICATION</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 — TIC-TAC-TOE -->
+        <article class="project reveal">
+          <div class="project__head">
+            <h3 class="project__title">TIC-TAC-TOE</h3>
+            <span class="tag-category">C++ · Game Development</span>
+          </div>
+
+          <p class="project__desc">
+            A graphical two-player Tic-Tac-Toe written in modern C++ with the SFML 2.6.2
+            multimedia library. Game logic is kept fully separate from rendering, and the
+            symbols are drawn from SFML primitives to get a pixel-art look.
+          </p>
+
+          <div class="project__cols">
+            <div>
+              <span class="meta-label">Category</span>
+              <p class="meta-value">Game development · Graphical application</p>
+            </div>
+            <div>
+              <span class="meta-label">Technologies</span>
+              <p class="meta-value">
+                <strong>C++</strong>, SFML 2.6.2, Visual Studio, <strong>enum class</strong>,
+                std::array, std::optional, std::unique_ptr
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span class="meta-label">Key features (verified from source)</span>
+            <ul class="project__skills">
+              <li>enum class state machine: Menu / Playing / GameOver</li>
+              <li>std::array&lt;CellState, 9&gt; board + std::optional winner</li>
+              <li>makeMove() guards range, occupancy, game over</li>
+              <li>Win detection across all 8 board patterns</li>
+              <li>Full-board draw detection</li>
+              <li>Custom Button class with hover states</li>
+              <li>Pixel X from rotated RectangleShape</li>
+              <li>Custom pixel_font.ttf loading, 60 FPS loop</li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="meta-label">Skills demonstrated</span>
+            <ul class="project__skills">
+              <li>Classes &amp; encapsulation</li>
+              <li>Enumerations as state machines</li>
+              <li>Value semantics</li>
+              <li>Logic / render separation</li>
+              <li>Mouse hit-testing</li>
+              <li>Resource loading</li>
+            </ul>
+          </div>
+
+          <div class="project__actions">
+            <span class="btn btn--todo" role="note">Repository · ADD LINK</span>
+            <span class="btn btn--todo" role="note">Demo · ADD LINK</span>
+            <span class="btn btn--todo" role="note">Screenshots · NEEDS VERIFICATION</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 — LOGIN PAGE -->
+        <article class="project reveal">
+          <div class="project__head">
+            <h3 class="project__title">Login Page</h3>
+            <span class="tag-category">HTML / CSS · Web Development</span>
+          </div>
+
+          <p class="project__desc">
+            A clean, centered login interface built from plain HTML and CSS, with inline field
+            icons, a Remember Me option, and account-recovery and registration links.
+          </p>
+
+          <div class="project__cols">
+            <div>
+              <span class="meta-label">Category</span>
+              <p class="meta-value">Web development · Front-end fundamentals</p>
+            </div>
+            <div>
+              <span class="meta-label">Technologies</span>
+              <p class="meta-value"><strong>HTML5</strong>, <strong>CSS3</strong>, BoxIcons</p>
+            </div>
+          </div>
+
+          <div>
+            <span class="meta-label">Key features (verified from source)</span>
+            <ul class="project__skills">
+              <li>Username &amp; password fields with required validation</li>
+              <li>Icon overlays inside each input</li>
+              <li>Remember Me checkbox</li>
+              <li>Forget Password link</li>
+              <li>Login submit button</li>
+              <li>Register link for new accounts</li>
+              <li>External stylesheet, centered layout</li>
+            </ul>
+          </div>
+
+          <div class="project__actions">
+            <a class="btn btn--primary"
+               href="https://samanthacaermare-lgtm.github.io/sam/main.html"
+               target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/><path d="M19 14v5a1.6 1.6 0 0 1-1.6 1.6H5.6A1.6 1.6 0 0 1 4 19V7.2A1.6 1.6 0 0 1 5.6 5.6h5"/>
+              </svg>
+              View live demo
+            </a>
+            <span class="btn btn--todo" role="note">Repository · ADD LINK</span>
+            <span class="btn btn--todo" role="note">Screenshots · NEEDS VERIFICATION</span>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="card__hint reveal" style="margin-top:1.4rem">
+        <strong>Note:</strong> two more projects are planned to complete the portfolio
+        (UI/UX case study and a PHP project) — sources not yet provided.
+      </p>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Currently learning
+       ==================================================================== -->
+  <section class="section" id="learning">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">04 — CURRENTLY LEARNING</p>
+        <h2 class="section-head__title">What I'm working on right now</h2>
+        <p class="section-head__sub">
+          Building a wider foundation one topic at a time. No percentages here — progress this
+          early doesn't compress into a number, and I'm not going to invent one.
+        </p>
+      </div>
+
+      <div class="stack">
+        <div class="card reveal">
+          <h3 class="card__title">Programming fundamentals</h3>
+          <p class="card__hint">
+            Variables, control flow, loops, functions and arrays — then actually reading the
+            error messages and using a debugger instead of guessing.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">C++ · C# · Java · PHP</h3>
+          <p class="card__hint">
+            C++ past syntax into classes and <code>enum class</code>. C# starting now, mostly to
+            compare a different OOP syntax. Java deeper into collections and splitting programs
+            into clean classes. PHP forms and connecting a front end to a back end.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Web development</h3>
+          <p class="card__hint">
+            Responsive layout with CSS Grid and Flexbox, JavaScript basics, and keeping HTML
+            structure, CSS styling and JS behaviour properly separated.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Software engineering concepts</h3>
+          <p class="card__hint">
+            A Git/GitHub workflow that means something — branches, commits, issues, pull requests.
+            Code that others can read: naming, small functions, and comments that explain why.
+            Documentation as part of the work rather than an afterthought.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <h3 class="card__title">Building practical applications</h3>
+          <p class="card__hint">
+            Finishing projects end to end, including the boring parts: setup instructions, README,
+            and testing. Then going back to rework older projects so the code is cleaner than the
+            first version.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Developer mindset
+       ==================================================================== -->
+  <section class="section" id="mindset">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">05 — DEVELOPER MINDSET</p>
+        <h2 class="section-head__title">Software development is a loop</h2>
+        <p class="section-head__sub">
+          Not a straight line. Some of my best progress has come out of the broken versions —
+          I'd rather ship something imperfect that I fully understand than something polished
+          I copied without knowing why it works.
+        </p>
+      </div>
+
+      <div class="loop reveal">
+        <div class="loop__step">
+          <p class="loop__label">Learn</p>
+          <p class="loop__note">Something new, deliberately</p>
+        </div>
+        <div class="loop__step">
+          <p class="loop__label">Build</p>
+          <p class="loop__note">Use it in something real</p>
+        </div>
+        <div class="loop__step">
+          <p class="loop__label">Break it</p>
+          <p class="loop__note">Find the actual failure</p>
+        </div>
+        <div class="loop__step">
+          <p class="loop__label">Understand</p>
+          <p class="loop__note">Why it happened</p>
+        </div>
+        <div class="loop__step">
+          <p class="loop__label">Improve</p>
+          <p class="loop__note">Cleaner, clearer, shorter</p>
+        </div>
+        <div class="loop__step">
+          <p class="loop__label">Try again</p>
+          <p class="loop__note">And grow</p>
+        </div>
+      </div>
+
+      <div class="values">
+        <div class="card reveal">
+          <p class="value__key">Perseverance</p>
+          <p class="value__body">I keep going when something doesn't work the first time.</p>
+        </div>
+        <div class="card reveal">
+          <p class="value__key">Curiosity</p>
+          <p class="value__body">I want to know how and why, not just how to hide the error.</p>
+        </div>
+        <div class="card reveal">
+          <p class="value__key">Continuous learning</p>
+          <p class="value__body">
+            I finish a project and immediately start learning the thing that would make it better.
+          </p>
+        </div>
+        <div class="card reveal">
+          <p class="value__key">Honesty about level</p>
+          <p class="value__body">
+            Working code and real progress over claims I haven't built yet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Certificates & events
+       ==================================================================== -->
+  <section class="section" id="records">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="section-head__index">06 — CERTIFICATES &amp; EVENTS</p>
+        <h2 class="section-head__title">Records so far</h2>
+        <p class="section-head__sub">
+          School certificates and attended events. Issuers and dates still need to be filled in —
+          I won't guess at them.
+        </p>
+      </div>
+
+      <div class="table-scroll reveal">
+        <table>
+          <thead>
+            <tr><th scope="col">Record</th><th scope="col">Type</th><th scope="col">Details</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>General Orientation &amp; Assembly</td>
+              <td class="state-ok">E-Certificate</td>
+              <td class="state-pending">NEEDS VERIFICATION — date &amp; issuer</td>
+            </tr>
+            <tr>
+              <td>Leadership Training</td>
+              <td class="state-ok">E-Certificate</td>
+              <td class="state-pending">NEEDS VERIFICATION — date &amp; issuer</td>
+            </tr>
+            <tr>
+              <td class="state-pending">Title not yet identified</td>
+              <td class="state-ok">E-Certificate</td>
+              <td class="state-pending">NEEDS VERIFICATION — title, date &amp; issuer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <hr class="wrap rule">
+
+  <!-- ====================================================================
+       Contact
+       ==================================================================== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact reveal">
+        <div class="section-head" style="margin-bottom:1rem">
+          <p class="section-head__index">07 — CONTACT</p>
+          <h2 class="section-head__title" style="margin-bottom:.4rem">Let's talk</h2>
+        </div>
+
+        <p class="contact__lead">
+          If you're hiring for an entry-level Software Engineering role or an internship, or you
+          just want to compare notes on beginner projects, my inbox is open.
+        </p>
+
+        <button class="contact__mail" id="copyEmail" type="button"
+                data-email="samantha_caermare@sjp2cd.edu.ph"
+                aria-label="Copy email address samantha_caermare at sjp2cd dot edu dot ph">
+          samantha_caermare@sjp2cd.edu.ph
+        </button>
+        <span class="copied-note" id="copiedNote" role="status" aria-live="polite"></span>
+
+        <div class="contact__row">
+          <a class="btn btn--primary" href="mailto:samantha_caermare@sjp2cd.edu.ph">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2.2"/>
+              <path d="M3.5 7l8.5 6 8.5-6"/>
+            </svg>
+            Send an email
+          </a>
+
+          <a class="btn btn--ghost" href="https://github.com/samanthacaermare-lgtm"
+             target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.9c.56.1.77-.24.77-.54v-2.1c-3.12.68-3.78-1.34-3.78-1.34-.51-1.3-1.25-1.64-1.25-1.64-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.63 1.22 3.27.93.1-.72.39-1.22.71-1.5-2.49-.28-5.11-1.25-5.11-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.7 10.7 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.69.11 2.98.72.79 1.15 1.79 1.15 3.02 0 4.32-2.62 5.27-5.12 5.55.4.35.76 1.04.76 2.1v3.11c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8z"/>
+            </svg>
+            Browse repositories
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ======================================================================
+     Footer
+     ====================================================================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__links">
+      <a href="https://github.com/samanthacaermare-lgtm" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="mailto:samantha_caermare@sjp2cd.edu.ph">Email</a>
+      <a href="https://samanthacaermare-lgtm.github.io/sam/main.html" target="_blank" rel="noopener noreferrer">Login Page Demo</a>
+      <a href="#top">Back to top</a>
+    </div>
+    <p>
+      Samantha A. Caermare · BSIT · Davao City, Philippines
+      <br>Built by hand in HTML, CSS and vanilla JavaScript.
+    </p>
+  </div>
+</footer>
+
+<script src="theme.js" defer></script>
+<script src="main.js" defer></script>
+</body>
+</html>
